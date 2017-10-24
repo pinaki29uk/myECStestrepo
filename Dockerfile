@@ -13,7 +13,7 @@ RUN groupadd -g ${DOCKER_GID} docker \
 RUN useradd -m -d /home/jenkins -s /bin/sh jenkins \
   && usermod -aG docker jenkins
 
-RUN yum -y install httpd; yum clean all
+RUN yum -y install httpd
 COPY /index.html /var/www/html/index.html
 
 EXPOSE 80
