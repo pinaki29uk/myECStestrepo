@@ -3,6 +3,7 @@ MAINTAINER "Scott Collier" <scollier@redhat.com>
 
 RUN yum -y update; yum clean all
 RUN yum -y install httpd; yum clean all
+RUN yum -y install jq; yum clean all
 COPY /index.html /var/www/html/index.html
 
 EXPOSE 80
