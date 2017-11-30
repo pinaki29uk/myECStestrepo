@@ -1,49 +1,24 @@
 {
-  "executionRoleArn": null,
-  "containerDefinitions": [
-    {
-      "dnsSearchDomains": null,
-      "logConfiguration": null,
-      "entryPoint": null,
-      "portMappings": [
+    "family": "mytask",
+    "containerDefinitions": [
         {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 80
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "mycontainer",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "protocol": "tcp",
+                    "hostPort": 80
+                }
+            ]
         }
-      ],
-      "command": null,
-      "linuxParameters": null,
-      "cpu": 10,
-      "environment": [],
-      "ulimits": null,
-      "dnsServers": null,
-      "mountPoints": [],
-      "workingDirectory": null,
-      "dockerSecurityOptions": null,
-      "memory": 128,
-      "memoryReservation": null,
-      "volumesFrom": [],
-      "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-      "disableNetworking": null,
-      "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "privileged": null,
-      "name": "mycontainer"
-    }
-  ],
-  "placementConstraints": [],
-  "memory": null,
-  "taskRoleArn": null,
+   ],
   "compatibilities": [
     "EC2"
   ],
-  "family": "mytask",
   "requiresAttributes": [
     {
       "targetId": null,
