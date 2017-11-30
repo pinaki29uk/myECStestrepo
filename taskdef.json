@@ -27,10 +27,6 @@
       "name": "com.amazonaws.ecs.capability.ecr-auth"
     }
   ],
-  "requiresCompatibilities": [],
   "networkMode": "bridge",
-  "cpu": null,
-  "revision": 3,
-  "status": "ACTIVE",
   "volumes": []
 }
