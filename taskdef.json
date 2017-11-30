@@ -15,18 +15,5 @@
                 }
             ]
         }
-   ],
-  "compatibilities": [
-    "EC2"
-  ],
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    }
-  ],
-  "networkMode": "bridge",
-  "volumes": []
+   ]
 }
