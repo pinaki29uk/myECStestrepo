@@ -1,19 +1,18 @@
 {
-    "family": "mytask",
+    "family": "mywebapp",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "mycontainer",
+            "name": "mywebapp",
             "cpu": 10,
             "memory": 256,
             "essential": true,
             "portMappings": [
                 {
                     "containerPort": 80,
-                    "protocol": "tcp",
                     "hostPort": 80
                 }
             ]
         }
-   ]
+    ]
 }
