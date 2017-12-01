@@ -1,9 +1,9 @@
 {
-    "family": "mywebapp1",
+    "family": "myapp",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
-            "name": "mywebapp1",
+            "name": "myapp",
             "cpu": 10,
             "memory": 256,
             "essential": true,
